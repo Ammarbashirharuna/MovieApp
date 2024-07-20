@@ -4,10 +4,10 @@ class Movie extends Component {
   state = {
     movies: getMovies(),
   };
-  handleDelete() {
-    const movie = this.state.movies.filter(m => m._id !== movie._id)
-    this.setState({movie})
-  }
+  handleDelete(movie) {
+    const movies = this.state.movies.filter(m => m._id !==  movie._id)
+    this.setState({movies})
+ }
 
   render() {
     return (
@@ -24,7 +24,7 @@ class Movie extends Component {
           </thead>
           <tbody>
             {this.state.movies.map((movie) => (
-              <tr key={this.state.movies_id}>
+              <tr key={movie}>
                 <td>{movie.title}</td>
                 <td>{movie.genre.name}</td>
                 <td>{movie.numberInStock}</td>
