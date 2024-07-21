@@ -5,13 +5,18 @@ class Movie extends Component {
     movies: getMovies(),
   };
   handleDelete(movie) {
-    const movies = this.state.movies.filter(m => m._id !==  movie._id)
-    this.setState({movies})
- }
+    const movies = this.state.movies.filter((m) => m._id !== movie._id);
+    this.setState({ movies });
+  }
 
   render() {
+    const { length: count } = this.state.movies.length;
+    if (count == 0) {
+       return <p>There is no movies in the database</p>
+     }
     return (
       <>
+        <p>There is { count } movies in the database </p>
         <table className="table">
           <thead>
             <tr>
@@ -39,7 +44,6 @@ class Movie extends Component {
                 </td>
               </tr>
             ))}
-            ;
           </tbody>
         </table>
       </>
