@@ -1,5 +1,4 @@
-// import Counter from "./components/counter";
-import Counters from "./components/counters";
+import Counters from "./components/counter";
 import Movie from "./components/movie";
 import "./global.css";
 function App() {

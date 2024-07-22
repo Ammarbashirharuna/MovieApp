@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Counter from "./counter";
 class Counters extends Component {
   state = {
     counters: [
@@ -11,9 +12,7 @@ class Counters extends Component {
   render() {
     return (
       <div>
-        {this.state.counters.map((counters) => (
-          <counter key={counters.id}  />
-        ))}
+       {this.state.counters.map(Counter => <Counter key={Counter.id} />)}
       </div>
     );
   }
