@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class Counter extends Component {
+class Count extends Component {
   state = {
     count: 0,
   };
@@ -32,5 +32,5 @@ class Counter extends Component {
     return count == 0 ? "Zero" : count;
   }
 }
-
-export default Counter;
+ 
+export default Count;
