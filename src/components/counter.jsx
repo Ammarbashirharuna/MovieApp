@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-class Count extends Component {
+import { Component } from "react";
+class Counter extends Component {
   state = {
     count: 0,
   };
@@ -10,7 +10,7 @@ class Count extends Component {
   };
   render() {
     return (
-      <React.Fragment>
+      <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={() => this.handleIncrement({ id: 1 })}
@@ -18,7 +18,7 @@ class Count extends Component {
         >
           Increment
         </button>
-      </React.Fragment>
+      </div>
     );
   }
   getBadgeClasses() {
@@ -33,4 +33,4 @@ class Count extends Component {
   }
 }
  
-export default Count;
+export default Counter;
