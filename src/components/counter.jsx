@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 class Counter extends Component {
   state = {
-    count: this.props.value,
+    count: this.props.counter.value,
   };
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
@@ -19,7 +19,11 @@ class Counter extends Component {
         >
           Increment
         </button>
-        <button onClick={this.props.onDelete} className="btn btn-danger m-2">Delete</button>
+        <button
+          onClick={() => this.props.onDelete(this.props.counter.Id)}
+          className="btn btn-danger btn-sm m-2">
+          Delete
+        </button>
       </div>
     );
   }
