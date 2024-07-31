@@ -1,5 +1,4 @@
 import { Component } from "react";
-import PropTypes from "prop-types";
 
 class Counter extends Component {
   state = {
@@ -20,7 +19,7 @@ class Counter extends Component {
           Increment
         </button>
         <button
-          onClick={() => this.props.onDelete(this.props.counter.Id)}
+          onClick={() => this.props.onDelete(this.props.Counter.id)}
           className="btn btn-danger btn-sm m-2">
           Delete
         </button>
